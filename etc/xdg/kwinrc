@@ -1,0 +1,7 @@
+[Windows]
+Placement=Maximizing
+BorderlessMaximizedWindows=true
+
+[Compositing]
+OpenGLIsUnsafe=true
+

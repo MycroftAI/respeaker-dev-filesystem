@@ -1,0 +1,9 @@
+SUBSYSTEM!="sound", GOTO="pulseaudio_end"
+ACTION!="change", GOTO="pulseaudio_end"
+KERNEL!="card*", GOTO="pulseaudio_end"
+
+# Seeed Voicecard
+ATTR{id}=="seeed8micvoicec",ATTR{number}=="0",ENV{PULSE_PROFILE_SET}="seeed-voicecard.conf"
+
+
+LABEL="pulseaudio_end"
