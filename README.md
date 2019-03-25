@@ -1,47 +1,28 @@
-Fix the changed repo label
+Steps needed to update the base image
+
+Install all the config files in the repo.
+
+## Fix the changed package repository label
 
 Run
-    sudo apt update
+    `sudo apt update`
 
 Answer yes to the question
+
+## Fix unicode issues in python
 
 Set locale to a generic UTF-8
 
 Run
-    sudo update-locale LANG=C.UTF-8
+    `sudo update-locale LANG=C.UTF-8`
 
-Audio setup
-
-Install etc/udev/rules.d/91-pulseaudio.rules
-Install usr/share/pulseaudio/alsa-mixer/profile-sets/seeed-voicecard.conf
-
-Add the files in the directory tree
+## Audio stuff
 
 Install alsa-utils:
-sudo apt-get install alsa-utils
+    `sudo apt-get install alsa-utils`
 
 Run alsamixer and increase all levels to ~60%
 
 Store alsa settings:
 
-sudo alsactl store
-
-Fix the changed repo label
-
-Run
-    sudo apt update
-
-Answer yes to the question
-
-Set locale to a generic UTF-8
-
-Run
-    sudo update-locale LANG=C.UTF-8
-
-
-etc/xdg
-
-    kwinrc
-    kdeglobals
-
-
+    `sudo alsactl store`
